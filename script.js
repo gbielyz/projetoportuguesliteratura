@@ -46,7 +46,8 @@ const works = [
     summary: "Poema narrativo em que um viajante atravessa três reinos espirituais e encontra figuras marcantes da história e da imaginação medieval.",
     themes: "Fé, Destino, Moralidade, Jornada",
     letter: "E",
-    cover: "radial-gradient(circle at 78% 18%, rgba(147, 197, 253, 0.75), transparent 30%), linear-gradient(145deg, #eef7ff 0%, #bfdbfe 48%, #60a5fa 100%)",
+    cover: "linear-gradient(180deg, rgba(255,255,255,0.08), rgba(6,24,38,0.42)), url('https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Gustave_Dore_Inferno1.jpg/1280px-Gustave_Dore_Inferno1.jpg')",
+    coverPosition: "center 24%",
     quote: "Uma descida pela sombra para reencontrar a luz.",
     slides: [
       ["A Divina Comédia", "Poema épico e alegórico que transforma a vida após a morte em uma jornada de autoconhecimento, justiça e esperança."],
@@ -69,7 +70,8 @@ const works = [
     summary: "Coleção de cem narrativas contadas por jovens afastados de Florença durante a peste, com retratos vivos da sociedade italiana.",
     themes: "Sociedade, Humanismo, Humor, Cotidiano",
     letter: "F",
-    cover: "radial-gradient(circle at 20% 18%, rgba(165, 243, 252, 0.72), transparent 32%), linear-gradient(145deg, #f0fdff 0%, #bae6fd 50%, #38bdf8 100%)",
+    cover: "linear-gradient(180deg, rgba(255,255,255,0.08), rgba(6,24,38,0.44)), url('https://upload.wikimedia.org/wikipedia/commons/b/b4/Giovanni_Boccaccio_and_Florentines_who_have_fled_from_the_plague.jpg')",
+    coverPosition: "center 42%",
     quote: "Quando o mundo desmorona, contar histórias também é sobreviver.",
     slides: [
       ["Decamerão", "Coletânea de cem histórias que observa a sociedade com humor, inteligência e grande atenção à vida cotidiana."],
@@ -92,7 +94,8 @@ const works = [
     summary: "Conjunto de poemas dedicados a Laura, construído como um diário lírico de lembranças, imagens e movimentos interiores.",
     themes: "Amor, Beleza, Emoção, Poesia",
     letter: "C",
-    cover: "radial-gradient(circle at 70% 20%, rgba(191, 219, 254, 0.82), transparent 32%), linear-gradient(145deg, #f8fbff 0%, #dbeafe 48%, #93c5fd 100%)",
+    cover: "linear-gradient(180deg, rgba(255,255,255,0.06), rgba(6,24,38,0.42)), url('https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Petrarch_canzoniere.jpg/1280px-Petrarch_canzoniere.jpg')",
+    coverPosition: "center 20%",
     quote: "O amor vira espelho: nele, o coração aprende a se ler.",
     slides: [
       ["Cancioneiro", "Conjunto de poemas líricos que fez da experiência amorosa um campo de análise emocional e estética."],
@@ -115,7 +118,8 @@ const works = [
     summary: "Epopeia portuguesa que acompanha a viagem de Vasco da Gama e transforma a navegação em grande narrativa histórica.",
     themes: "Exploração, Heroísmo, Mitologia, Aventura",
     letter: "B",
-    cover: "radial-gradient(circle at 24% 22%, rgba(125, 211, 252, 0.76), transparent 34%), linear-gradient(145deg, #effaff 0%, #bae6fd 48%, #0ea5e9 100%)",
+    cover: "linear-gradient(180deg, rgba(255,255,255,0.04), rgba(6,24,38,0.34)), url('https://upload.wikimedia.org/wikipedia/commons/0/0d/Os_Lus%C3%ADadas.jpg')",
+    coverPosition: "center center",
     quote: "O mar abre caminhos, mas também cobra memória.",
     slides: [
       ["Os Lusíadas", "Epopeia portuguesa que celebra a viagem de Vasco da Gama e reflete sobre coragem, fama, poder e destino coletivo."],
@@ -138,7 +142,8 @@ const works = [
     summary: "Tragédia sobre um príncipe dinamarquês que descobre um crime no palácio e passa a investigar a verdade por trás da corte.",
     themes: "Poder, Vingança, Dúvida, Tragédia",
     letter: "A",
-    cover: "radial-gradient(circle at 76% 18%, rgba(147, 197, 253, 0.75), transparent 30%), linear-gradient(145deg, #f8fafc 0%, #cbd5e1 48%, #64748b 100%)",
+    cover: "linear-gradient(180deg, rgba(255,255,255,0.04), rgba(6,24,38,0.36)), url('https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Hamlet_Q2_TP_1604.jpg/1280px-Hamlet_Q2_TP_1604.jpg')",
+    coverPosition: "center center",
     quote: "A maior batalha acontece dentro da própria consciência.",
     slides: [
       ["Hamlet", "Tragédia sobre dúvida, vingança e colapso moral, centrada em um príncipe incapaz de agir sem compreender o peso de sua ação."],
@@ -161,7 +166,8 @@ const works = [
     summary: "Peça sobre dois jovens de famílias rivais em Verona, marcada por encontros secretos, conflitos públicos e escolhas apressadas.",
     themes: "Amor, Destino, Juventude, Tragédia",
     letter: "G",
-    cover: "radial-gradient(circle at 18% 20%, rgba(186, 230, 253, 0.8), transparent 30%), linear-gradient(145deg, #f7fbff 0%, #dbeafe 48%, #7dd3fc 100%)",
+    cover: "linear-gradient(180deg, rgba(255,255,255,0.04), rgba(6,24,38,0.34)), url('https://upload.wikimedia.org/wikipedia/commons/1/1e/Romeo_and_Juliet_Q2_Title_Page.jpg')",
+    coverPosition: "center center",
     quote: "O amor floresce depressa quando o mundo insiste em odiar.",
     slides: [
       ["Romeu e Julieta", "Tragédia lírica sobre amor juvenil, destino e violência social entre famílias inimigas."],
@@ -184,7 +190,8 @@ const works = [
     summary: "Romance sobre um fidalgo leitor de histórias cavaleirescas que sai pelos caminhos da Espanha acompanhado por Sancho Pança.",
     themes: "Sonhos, Loucura, Idealismo, Humor",
     letter: "D",
-    cover: "radial-gradient(circle at 72% 18%, rgba(103, 232, 249, 0.64), transparent 30%), linear-gradient(145deg, #f0fdff 0%, #ccfbf1 48%, #5eead4 100%)",
+    cover: "linear-gradient(180deg, rgba(255,255,255,0.04), rgba(6,24,38,0.34)), url('https://upload.wikimedia.org/wikipedia/commons/b/ba/Title_page_first_edition_Don_Quijote.jpg')",
+    coverPosition: "center center",
     quote: "Às vezes, sonhar demais é o modo mais humano de resistir.",
     slides: [
       ["Dom Quixote", "Romance que mistura humor, melancolia e reflexão sobre leitura, imaginação e choque entre ideal e realidade."],
@@ -341,9 +348,7 @@ function renderTimelinePanel(author) {
 function renderWorks() {
   worksGrid.innerHTML = works.map((work) => `
     <article class="work-card">
-      <div class="cover" data-title="${work.title}" style="--cover: ${work.cover}">
-        <span class="cover-mark"></span>
-        <span class="cover-lines"></span>
+      <div class="cover" data-title="${work.title}" style="--cover: ${work.cover}; --cover-position: ${work.coverPosition}">
       </div>
       <div class="work-body">
         <p class="artifact-label">Acervo literário</p>
@@ -378,7 +383,8 @@ function showReveal(work) {
   selectedWork = work;
   revealCover.dataset.title = work.title;
   revealCover.style.setProperty("--cover", work.cover);
-  revealCover.innerHTML = `<span class="cover-mark"></span><span class="cover-lines"></span>`;
+  revealCover.style.setProperty("--cover-position", work.coverPosition);
+  revealCover.innerHTML = "";
   revealTitle.textContent = work.title;
   revealQuote.textContent = work.quote;
   revealOverlay.classList.add("active");
@@ -411,9 +417,7 @@ function renderSlide() {
 
   slideContent.innerHTML = `
     <div class="slide-layout">
-      <div class="slide-cover-mini" style="--cover: ${selectedWork.cover}" aria-hidden="true">
-        <span class="cover-mark"></span>
-        <span class="cover-lines"></span>
+      <div class="slide-cover-mini" style="--cover: ${selectedWork.cover}; --cover-position: ${selectedWork.coverPosition}" aria-hidden="true">
       </div>
       <div class="slide-copy">
         <p class="eyebrow">${selectedWork.author} · ${selectedWork.year}</p>

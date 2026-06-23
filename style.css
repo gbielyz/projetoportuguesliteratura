@@ -493,53 +493,29 @@ h1 {
   position: relative;
   overflow: hidden;
   background: var(--cover);
+  background-position: var(--cover-position, center);
+  background-size: cover;
 }
 
 .cover::before,
 .reveal-cover::before {
   content: "";
   position: absolute;
-  inset: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.68);
+  inset: 0;
+  border: 0;
+  background:
+    linear-gradient(180deg, rgba(8, 34, 52, 0) 34%, rgba(8, 34, 52, 0.68) 100%),
+    linear-gradient(90deg, rgba(8, 34, 52, 0.34), rgba(8, 34, 52, 0));
 }
 
 .cover::after,
 .reveal-cover::after {
   content: attr(data-title);
   position: relative;
-  color: #0f2b46;
-  font-size: 1.2rem;
+  color: #ffffff;
+  font-size: 1.28rem;
   line-height: 1.05;
-  text-shadow: 0 1px 12px rgba(255, 255, 255, 0.72);
-}
-
-.cover .cover-mark,
-.reveal-cover .cover-mark,
-.slide-cover-mini .cover-mark {
-  position: absolute;
-  inset: 24px 24px auto auto;
-  width: 72px;
-  height: 72px;
-  border: 1px solid rgba(255, 255, 255, 0.64);
-  border-radius: 8px;
-  background:
-    linear-gradient(90deg, transparent 48%, rgba(255, 255, 255, 0.5) 49% 51%, transparent 52%),
-    linear-gradient(0deg, transparent 48%, rgba(255, 255, 255, 0.34) 49% 51%, transparent 52%);
-  opacity: 0.8;
-}
-
-.cover .cover-lines,
-.reveal-cover .cover-lines,
-.slide-cover-mini .cover-lines {
-  position: absolute;
-  left: 24px;
-  right: 24px;
-  bottom: 24px;
-  height: 56%;
-  background:
-    repeating-linear-gradient(180deg, rgba(255, 255, 255, 0.36) 0 1px, transparent 1px 13px),
-    linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.18));
-  mask-image: linear-gradient(to bottom, transparent, #000 18%, #000);
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.42);
 }
 
 .work-body {
@@ -719,6 +695,8 @@ h1 {
   min-height: min(58vh, 520px);
   border-radius: var(--radius);
   background: var(--cover);
+  background-position: var(--cover-position, center);
+  background-size: cover;
   position: relative;
   overflow: hidden;
   box-shadow: 0 24px 70px rgba(36, 86, 130, 0.18);
