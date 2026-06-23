@@ -47,7 +47,7 @@ const works = [
     tags: ["fé", "destino", "jornada", "moralidade"],
     themes: "Fé, Destino, Moralidade, Jornada",
     letter: "E",
-    cover: "linear-gradient(145deg, #170b0b 0%, #671f1a 42%, #d6a75d 100%)",
+    cover: "radial-gradient(circle at 72% 18%, rgba(125, 211, 252, 0.26), transparent 30%), linear-gradient(145deg, #070b12 0%, #172638 48%, #3b5874 100%)",
     quote: "Uma descida pela sombra para reencontrar a luz.",
     slides: [
       ["A Divina Comédia", "Poema épico e alegórico que transforma a vida após a morte em uma jornada de autoconhecimento, justiça e esperança."],
@@ -71,7 +71,7 @@ const works = [
     tags: ["sociedade", "humanismo", "humor", "cotidiano"],
     themes: "Sociedade, Humanismo, Humor, Cotidiano",
     letter: "F",
-    cover: "linear-gradient(145deg, #182018 0%, #476d5a 46%, #d8aa57 100%)",
+    cover: "radial-gradient(circle at 20% 18%, rgba(125, 184, 173, 0.28), transparent 32%), linear-gradient(145deg, #07100f 0%, #18312f 50%, #4f7b82 100%)",
     quote: "Quando o mundo desmorona, contar histórias também é sobreviver.",
     slides: [
       ["Decamerão", "Coletânea de cem histórias que observa a sociedade com humor, inteligência e grande atenção à vida cotidiana."],
@@ -95,7 +95,7 @@ const works = [
     tags: ["amor", "beleza", "emoção", "poesia"],
     themes: "Amor, Beleza, Emoção, Poesia",
     letter: "C",
-    cover: "linear-gradient(145deg, #211523 0%, #8f4b63 48%, #e0bc72 100%)",
+    cover: "radial-gradient(circle at 70% 20%, rgba(174, 196, 255, 0.24), transparent 32%), linear-gradient(145deg, #0a0d16 0%, #24324a 48%, #6c7ea3 100%)",
     quote: "O amor vira espelho: nele, o coração aprende a se ler.",
     slides: [
       ["Cancioneiro", "Conjunto de poemas líricos que fez da experiência amorosa um campo de análise emocional e estética."],
@@ -119,7 +119,7 @@ const works = [
     tags: ["exploração", "heroísmo", "mitologia", "aventura"],
     themes: "Exploração, Heroísmo, Mitologia, Aventura",
     letter: "B",
-    cover: "linear-gradient(145deg, #071923 0%, #1f6773 48%, #d8aa57 100%)",
+    cover: "radial-gradient(circle at 24% 22%, rgba(108, 210, 230, 0.28), transparent 34%), linear-gradient(145deg, #041018 0%, #0d3a4a 48%, #5c8ea4 100%)",
     quote: "O mar abre caminhos, mas também cobra memória.",
     slides: [
       ["Os Lusíadas", "Epopeia portuguesa que celebra a viagem de Vasco da Gama e reflete sobre coragem, fama, poder e destino coletivo."],
@@ -143,7 +143,7 @@ const works = [
     tags: ["poder", "vingança", "dúvida", "tragédia"],
     themes: "Poder, Vingança, Dúvida, Tragédia",
     letter: "A",
-    cover: "linear-gradient(145deg, #090910 0%, #333044 45%, #ad8c49 100%)",
+    cover: "radial-gradient(circle at 76% 18%, rgba(138, 164, 255, 0.24), transparent 30%), linear-gradient(145deg, #07080d 0%, #1d2436 48%, #65718f 100%)",
     quote: "A maior batalha acontece dentro da própria consciência.",
     slides: [
       ["Hamlet", "Tragédia sobre dúvida, vingança e colapso moral, centrada em um príncipe incapaz de agir sem compreender o peso de sua ação."],
@@ -167,7 +167,7 @@ const works = [
     tags: ["amor", "destino", "juventude", "tragédia"],
     themes: "Amor, Destino, Juventude, Tragédia",
     letter: "G",
-    cover: "linear-gradient(145deg, #1c0d16 0%, #8a2635 44%, #e2bb71 100%)",
+    cover: "radial-gradient(circle at 18% 20%, rgba(148, 196, 230, 0.24), transparent 30%), linear-gradient(145deg, #080b11 0%, #26344d 48%, #7d91ad 100%)",
     quote: "O amor floresce depressa quando o mundo insiste em odiar.",
     slides: [
       ["Romeu e Julieta", "Tragédia lírica sobre amor juvenil, destino e violência social entre famílias inimigas."],
@@ -191,7 +191,7 @@ const works = [
     tags: ["sonhos", "loucura", "idealismo", "humor"],
     themes: "Sonhos, Loucura, Idealismo, Humor",
     letter: "D",
-    cover: "linear-gradient(145deg, #17120d 0%, #8f6a35 45%, #d8aa57 100%)",
+    cover: "radial-gradient(circle at 72% 18%, rgba(125, 184, 173, 0.24), transparent 30%), linear-gradient(145deg, #080d0f 0%, #1e3238 48%, #6d8f96 100%)",
     quote: "Às vezes, sonhar demais é o modo mais humano de resistir.",
     slides: [
       ["Dom Quixote", "Romance que mistura humor, melancolia e reflexão sobre leitura, imaginação e choque entre ideal e realidade."],
