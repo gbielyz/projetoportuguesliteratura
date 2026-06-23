@@ -48,6 +48,7 @@ const works = [
     letter: "E",
     cover: "linear-gradient(180deg, rgba(255,255,255,0.08), rgba(6,24,38,0.42)), url('https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Gustave_Dore_Inferno1.jpg/1280px-Gustave_Dore_Inferno1.jpg')",
     coverPosition: "center 24%",
+    accent: "#4f46e5",
     quote: "Uma descida pela sombra para reencontrar a luz.",
     slides: [
       ["A Divina Comédia", "Poema épico e alegórico que transforma a vida após a morte em uma jornada de autoconhecimento, justiça e esperança."],
@@ -72,6 +73,7 @@ const works = [
     letter: "F",
     cover: "linear-gradient(180deg, rgba(255,255,255,0.08), rgba(6,24,38,0.44)), url('https://upload.wikimedia.org/wikipedia/commons/b/b4/Giovanni_Boccaccio_and_Florentines_who_have_fled_from_the_plague.jpg')",
     coverPosition: "center 42%",
+    accent: "#0f9f9a",
     quote: "Quando o mundo desmorona, contar histórias também é sobreviver.",
     slides: [
       ["Decamerão", "Coletânea de cem histórias que observa a sociedade com humor, inteligência e grande atenção à vida cotidiana."],
@@ -96,6 +98,7 @@ const works = [
     letter: "C",
     cover: "linear-gradient(180deg, rgba(255,255,255,0.06), rgba(6,24,38,0.42)), url('https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Petrarch_canzoniere.jpg/1280px-Petrarch_canzoniere.jpg')",
     coverPosition: "center 20%",
+    accent: "#c026d3",
     quote: "O amor vira espelho: nele, o coração aprende a se ler.",
     slides: [
       ["Cancioneiro", "Conjunto de poemas líricos que fez da experiência amorosa um campo de análise emocional e estética."],
@@ -120,6 +123,7 @@ const works = [
     letter: "B",
     cover: "linear-gradient(180deg, rgba(255,255,255,0.04), rgba(6,24,38,0.34)), url('https://upload.wikimedia.org/wikipedia/commons/0/0d/Os_Lus%C3%ADadas.jpg')",
     coverPosition: "center center",
+    accent: "#0284c7",
     quote: "O mar abre caminhos, mas também cobra memória.",
     slides: [
       ["Os Lusíadas", "Epopeia portuguesa que celebra a viagem de Vasco da Gama e reflete sobre coragem, fama, poder e destino coletivo."],
@@ -144,6 +148,7 @@ const works = [
     letter: "A",
     cover: "linear-gradient(180deg, rgba(255,255,255,0.04), rgba(6,24,38,0.36)), url('https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Hamlet_Q2_TP_1604.jpg/1280px-Hamlet_Q2_TP_1604.jpg')",
     coverPosition: "center center",
+    accent: "#334155",
     quote: "A maior batalha acontece dentro da própria consciência.",
     slides: [
       ["Hamlet", "Tragédia sobre dúvida, vingança e colapso moral, centrada em um príncipe incapaz de agir sem compreender o peso de sua ação."],
@@ -168,6 +173,7 @@ const works = [
     letter: "G",
     cover: "linear-gradient(180deg, rgba(255,255,255,0.04), rgba(6,24,38,0.34)), url('https://upload.wikimedia.org/wikipedia/commons/1/1e/Romeo_and_Juliet_Q2_Title_Page.jpg')",
     coverPosition: "center center",
+    accent: "#e11d48",
     quote: "O amor floresce depressa quando o mundo insiste em odiar.",
     slides: [
       ["Romeu e Julieta", "Tragédia lírica sobre amor juvenil, destino e violência social entre famílias inimigas."],
@@ -192,6 +198,7 @@ const works = [
     letter: "D",
     cover: "linear-gradient(180deg, rgba(255,255,255,0.04), rgba(6,24,38,0.34)), url('https://upload.wikimedia.org/wikipedia/commons/b/ba/Title_page_first_edition_Don_Quijote.jpg')",
     coverPosition: "center center",
+    accent: "#ca8a04",
     quote: "Às vezes, sonhar demais é o modo mais humano de resistir.",
     slides: [
       ["Dom Quixote", "Romance que mistura humor, melancolia e reflexão sobre leitura, imaginação e choque entre ideal e realidade."],
@@ -347,7 +354,7 @@ function renderTimelinePanel(author) {
 
 function renderWorks() {
   worksGrid.innerHTML = works.map((work) => `
-    <article class="work-card">
+    <article class="work-card" style="--work-accent: ${work.accent}">
       <div class="cover" data-title="${work.title}" style="--cover: ${work.cover}; --cover-position: ${work.coverPosition}">
       </div>
       <div class="work-body">
@@ -384,6 +391,7 @@ function showReveal(work) {
   revealCover.dataset.title = work.title;
   revealCover.style.setProperty("--cover", work.cover);
   revealCover.style.setProperty("--cover-position", work.coverPosition);
+  revealOverlay.style.setProperty("--work-accent", work.accent);
   revealCover.innerHTML = "";
   revealTitle.textContent = work.title;
   revealQuote.textContent = work.quote;
@@ -405,6 +413,7 @@ function closeRevealOverlay() {
 function openPresentation() {
   closeRevealOverlay();
   currentSlide = 0;
+  presentation.style.setProperty("--work-accent", selectedWork.accent);
   presentation.classList.add("active");
   presentation.setAttribute("aria-hidden", "false");
   renderSlide();
@@ -420,10 +429,11 @@ function renderSlide() {
   const [heading, body] = selectedWork.slides[currentSlide];
   const isFirstSlide = currentSlide === 0;
   const insights = slideInsights[selectedWork.id]?.[currentSlide] || [];
+  slideContent.style.setProperty("--work-accent", selectedWork.accent);
 
   slideContent.innerHTML = `
     <div class="slide-layout">
-      <div class="slide-cover-mini" style="--cover: ${selectedWork.cover}; --cover-position: ${selectedWork.coverPosition}" aria-hidden="true">
+      <div class="slide-cover-mini" style="--cover: ${selectedWork.cover}; --cover-position: ${selectedWork.coverPosition}; --work-accent: ${selectedWork.accent}" aria-hidden="true">
       </div>
       <div class="slide-copy">
         <p class="eyebrow">${selectedWork.author} · ${selectedWork.year}</p>

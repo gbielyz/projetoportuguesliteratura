@@ -480,8 +480,23 @@ h1 {
 }
 
 .work-card {
+  --work-accent: var(--accent);
   overflow: hidden;
+  position: relative;
   transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.work-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 4px;
+  background: var(--work-accent);
+  z-index: 2;
+}
+
+.work-card:hover {
+  border-color: color-mix(in srgb, var(--work-accent) 48%, white);
 }
 
 .cover,
@@ -531,7 +546,7 @@ h1 {
 }
 
 .meta {
-  color: var(--accent-strong);
+  color: var(--work-accent, var(--accent-strong));
   font-size: 0.9rem;
   font-weight: 700;
 }
@@ -585,12 +600,13 @@ h1 {
 }
 
 .reveal-overlay {
+  --work-accent: var(--accent);
   align-items: center;
   justify-content: center;
   padding: 22px;
   overflow: auto;
   background:
-    radial-gradient(circle at 50% 30%, rgba(125, 211, 252, 0.46), transparent 34%),
+    radial-gradient(circle at 50% 30%, color-mix(in srgb, var(--work-accent) 30%, transparent), transparent 34%),
     rgba(240, 249, 255, 0.94);
   animation: revealScreenLight 1.8s ease both;
   transition: background 0.8s ease;
@@ -598,7 +614,7 @@ h1 {
 
 .reveal-overlay.reveal-dark {
   background:
-    radial-gradient(circle at 50% 50%, rgba(8, 28, 44, 0.22), transparent 24%),
+    radial-gradient(circle at 50% 50%, color-mix(in srgb, var(--work-accent) 22%, transparent), transparent 24%),
     rgba(2, 9, 17, 0.98);
 }
 
@@ -619,7 +635,7 @@ h1 {
 }
 
 .reveal-kicker {
-  color: var(--accent-strong);
+  color: var(--work-accent);
   font-size: clamp(1.45rem, 4vw, 3rem);
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -631,7 +647,9 @@ h1 {
   min-height: clamp(230px, 42vh, 470px);
   margin: 0 auto 26px;
   border-radius: var(--radius);
-  box-shadow: 0 28px 90px rgba(36, 86, 130, 0.22);
+  box-shadow:
+    0 28px 90px rgba(36, 86, 130, 0.22),
+    0 0 0 1px color-mix(in srgb, var(--work-accent) 34%, transparent);
 }
 
 .reveal-stage h2 {
@@ -687,7 +705,7 @@ h1 {
 .progress-bar {
   width: 10%;
   height: 100%;
-  background: linear-gradient(90deg, #93c5fd, var(--accent));
+  background: linear-gradient(90deg, #93c5fd, var(--work-accent, var(--accent)));
   transition: width 0.3s ease;
 }
 
@@ -709,6 +727,7 @@ h1 {
 }
 
 .slide-cover-mini {
+  --work-accent: var(--accent);
   min-height: min(58vh, 520px);
   border-radius: var(--radius);
   background: var(--cover);
@@ -716,7 +735,9 @@ h1 {
   background-size: cover;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 24px 70px rgba(36, 86, 130, 0.18);
+  box-shadow:
+    0 24px 70px rgba(36, 86, 130, 0.18),
+    0 0 0 1px color-mix(in srgb, var(--work-accent) 28%, transparent);
 }
 
 .slide-copy {
@@ -732,7 +753,7 @@ h1 {
 }
 
 .slide h3 {
-  color: var(--accent-strong);
+  color: var(--work-accent, var(--accent-strong));
   font-size: clamp(1.2rem, 3vw, 2rem);
   margin-bottom: 10px;
 }
@@ -753,8 +774,8 @@ h1 {
 .slide-insights {
   margin-top: 24px;
   padding: 18px;
-  border-left: 3px solid var(--accent);
-  background: rgba(224, 242, 254, 0.62);
+  border-left: 3px solid var(--work-accent, var(--accent));
+  background: color-mix(in srgb, var(--work-accent, var(--accent)) 10%, white);
   border-radius: 0 var(--radius) var(--radius) 0;
 }
 
