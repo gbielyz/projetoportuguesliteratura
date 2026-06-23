@@ -387,12 +387,18 @@ function showReveal(work) {
   revealCover.innerHTML = "";
   revealTitle.textContent = work.title;
   revealQuote.textContent = work.quote;
-  revealOverlay.classList.add("active");
+  revealOverlay.classList.remove("reveal-ready");
+  revealOverlay.classList.add("active", "reveal-dark");
   revealOverlay.setAttribute("aria-hidden", "false");
+
+  window.setTimeout(() => {
+    revealOverlay.classList.remove("reveal-dark");
+    revealOverlay.classList.add("reveal-ready");
+  }, 1150);
 }
 
 function closeRevealOverlay() {
-  revealOverlay.classList.remove("active");
+  revealOverlay.classList.remove("active", "reveal-dark", "reveal-ready");
   revealOverlay.setAttribute("aria-hidden", "true");
 }
 
