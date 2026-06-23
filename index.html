@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Renascimento e História da Literatura</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero" id="inicio">
+    <nav class="topbar" aria-label="Navegação principal">
+      <a class="brand" href="#inicio">Museu Literário</a>
+      <div class="nav-links">
+        <a href="#renascimento">Renascimento</a>
+        <a href="#linha-do-tempo">Linha do tempo</a>
+        <a href="#obras">Obras</a>
+        <a href="#votacao">Votação</a>
+      </div>
+    </nav>
+
+    <div class="hero-content">
+      <p class="eyebrow">Exposição interativa</p>
+      <h1>Renascimento e História da Literatura</h1>
+      <p class="subtitle">Uma jornada pelas obras que transformaram a forma como contamos histórias.</p>
+      <a class="primary-btn" href="#renascimento">Começar Jornada</a>
+      <div class="hero-stats" aria-label="Destaques da exposição">
+        <span><strong>7</strong> obras essenciais</span>
+        <span><strong>6</strong> autores históricos</span>
+        <span><strong>70</strong> slides exclusivos</span>
+        <span><strong>0</strong> dependências externas</span>
+      </div>
+    </div>
+
+    <div class="hero-art" aria-hidden="true">
+      <div class="manuscript"></div>
+      <div class="quill"></div>
+      <div class="orbit orbit-one"></div>
+      <div class="orbit orbit-two"></div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section intro-section" id="renascimento">
+      <div class="section-heading">
+        <p class="eyebrow">Sala I</p>
+        <h2>O que foi o Renascimento?</h2>
+        <p>Entre os séculos XIV e XVI, a Europa redescobriu textos clássicos, questionou antigas certezas e colocou o ser humano no centro da criação artística, científica e literária.</p>
+      </div>
+
+      <div class="concept-grid">
+        <article class="concept-card">
+          <span>01</span>
+          <h3>Humanismo</h3>
+          <p>Movimento intelectual que valorizou a dignidade humana, a educação, a leitura dos clássicos e a capacidade do indivíduo de compreender o mundo.</p>
+        </article>
+        <article class="concept-card">
+          <span>02</span>
+          <h3>Antropocentrismo</h3>
+          <p>Visão que deslocou o olhar exclusivamente religioso para uma atenção maior ao ser humano, suas escolhas, paixões e conflitos.</p>
+        </article>
+        <article class="concept-card">
+          <span>03</span>
+          <h3>Racionalismo</h3>
+          <p>Confiança na razão, na observação e no estudo como caminhos para explicar a natureza, a sociedade e a própria experiência humana.</p>
+        </article>
+        <article class="concept-card">
+          <span>04</span>
+          <h3>Valorização das artes</h3>
+          <p>Pintura, arquitetura, teatro, poesia e narrativa ganharam novo prestígio, buscando harmonia, beleza, técnica e profundidade psicológica.</p>
+        </article>
+        <article class="concept-card">
+          <span>05</span>
+          <h3>Cultura greco-romana</h3>
+          <p>Autores antigos voltaram a ser estudados como modelos de forma, pensamento, mitologia, retórica e representação do destino humano.</p>
+        </article>
+      </div>
+
+      <div class="context-ribbon">
+        <article>
+          <h3>Antes</h3>
+          <p>A literatura medieval estava muito ligada à religião, à moral cristã e à visão de mundo teocêntrica.</p>
+        </article>
+        <article>
+          <h3>Durante</h3>
+          <p>O Renascimento ampliou o foco: razão, corpo, política, desejo, indivíduo e mundo clássico entraram no centro da criação.</p>
+        </article>
+        <article>
+          <h3>Depois</h3>
+          <p>O romance, o teatro moderno e a poesia introspectiva herdaram essa liberdade de observar a vida humana em profundidade.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section timeline-section" id="linha-do-tempo">
+      <div class="section-heading">
+        <p class="eyebrow">Sala II</p>
+        <h2>Linha do tempo interativa</h2>
+        <p>Toque ou clique em cada autor para revelar sua contribuição para a literatura ocidental.</p>
+      </div>
+
+      <div class="timeline" id="timeline" aria-label="Linha do tempo de autores"></div>
+      <article class="timeline-panel" id="timelinePanel" aria-live="polite"></article>
+    </section>
+
+    <section class="section works-section" id="obras">
+      <div class="section-heading">
+        <p class="eyebrow">Sala III</p>
+        <h2>Grandes Obras</h2>
+        <p>Sete livros que atravessaram séculos porque ainda conversam com nossas dúvidas, medos, desejos e sonhos.</p>
+      </div>
+      <p class="gallery-note">Cada capa abaixo é uma peça visual simbólica: fogo moral, peste, amor idealizado, mar, palco, juventude trágica e imaginação cavaleiresca.</p>
+
+      <div class="works-grid" id="worksGrid"></div>
+    </section>
+
+    <section class="section vote-section" id="votacao">
+      <div class="section-heading">
+        <p class="eyebrow">Sala Final</p>
+        <h2>Qual obra literária combina mais com você?</h2>
+        <p>Escolha pelos temas. A obra será revelada apenas depois do seu voto.</p>
+      </div>
+
+      <div class="vote-grid" id="voteGrid"></div>
+    </section>
+  </main>
+
+  <div class="reveal-overlay" id="revealOverlay" aria-hidden="true">
+    <div class="reveal-stage">
+      <p class="reveal-kicker">Sua obra é...</p>
+      <div class="reveal-cover" id="revealCover"></div>
+      <h2 id="revealTitle"></h2>
+      <p class="reveal-quote" id="revealQuote"></p>
+      <div class="reveal-actions">
+        <button class="primary-btn" id="enterPresentation">Entrar no modo apresentação</button>
+        <button class="ghost-btn" id="closeReveal">Voltar à exposição</button>
+      </div>
+    </div>
+  </div>
+
+  <section class="presentation" id="presentation" aria-hidden="true">
+    <div class="presentation-top">
+      <button class="ghost-btn" id="homeFromPresentation">Voltar ao início</button>
+      <div class="slide-count" id="slideCount">Slide 1 de 10</div>
+    </div>
+    <div class="progress-track" aria-hidden="true">
+      <div class="progress-bar" id="progressBar"></div>
+    </div>
+    <article class="slide" id="slideContent" aria-live="polite"></article>
+    <div class="slide-controls">
+      <button class="ghost-btn" id="prevSlide">Anterior</button>
+      <button class="primary-btn" id="nextSlide">Próximo</button>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
