@@ -462,7 +462,24 @@ document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") closePresentation();
 });
 
+function setupScrollReveal() {
+  const targets = document.querySelectorAll(".section-heading, .concept-card, .context-ribbon, .timeline, .timeline-panel, .work-card, .vote-card");
+  targets.forEach((target) => target.classList.add("reveal-on-scroll"));
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.14 });
+
+  targets.forEach((target) => observer.observe(target));
+}
+
 // Renderiza as áreas interativas a partir dos dados acima.
 renderTimeline();
 renderWorks();
 renderVote();
+setupScrollReveal();
