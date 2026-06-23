@@ -355,6 +355,7 @@ function renderTimelinePanel(author) {
 function renderWorks() {
   worksGrid.innerHTML = works.map((work) => `
     <article class="work-card" style="--work-accent: ${work.accent}">
+      <span class="work-color-strip" aria-hidden="true"></span>
       <div class="cover" data-title="${work.title}" style="--cover: ${work.cover}; --cover-position: ${work.coverPosition}">
       </div>
       <div class="work-body">
@@ -402,7 +403,7 @@ function showReveal(work) {
   window.setTimeout(() => {
     revealOverlay.classList.remove("reveal-dark");
     revealOverlay.classList.add("reveal-ready");
-  }, 1150);
+  }, 1350);
 }
 
 function closeRevealOverlay() {
