@@ -357,13 +357,6 @@ function renderWorks() {
         <p class="meta">${work.author} · ${work.year}</p>
         <h3>${work.title}</h3>
         <p>${work.summary}</p>
-        <div class="tags">
-          ${work.tags.map((tag) => `<span class="tag">${tag}</span>`).join("")}
-        </div>
-        <div class="work-facts">
-          <span>Ambiente: ${work.themes.split(", ").slice(0, 2).join(" e ")}</span>
-          <span>Leitura: ${work.slides[9][1].replace("Porque ", "")}</span>
-        </div>
       </div>
     </article>
   `).join("");
@@ -375,7 +368,6 @@ function renderVote() {
 
   voteGrid.innerHTML = orderedWorks.map((work) => `
     <button class="vote-card" data-id="${work.id}">
-      <span class="vote-letter">Opção ${work.letter}</span>
       <span class="vote-themes">${work.themes}</span>
       <span class="vote-hint">Escolha esta sala se esses temas parecem contar algo sobre você.</span>
     </button>

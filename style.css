@@ -498,35 +498,9 @@ h1 {
   margin-bottom: 10px;
 }
 
-.work-facts {
-  display: grid;
-  gap: 7px;
-  margin-top: 16px;
-  padding-top: 14px;
-  border-top: 1px solid rgba(157, 184, 205, 0.13);
-  color: rgba(233, 241, 247, 0.68);
-  font-size: 0.86rem;
-}
-
 .meta {
   color: var(--gold);
   font-size: 0.9rem;
-}
-
-.tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 7px;
-  margin-top: 16px;
-}
-
-.tag {
-  color: #c9eaff;
-  border: 1px solid rgba(125, 211, 252, 0.2);
-  background: rgba(125, 211, 252, 0.065);
-  border-radius: 999px;
-  padding: 5px 9px;
-  font-size: 0.78rem;
 }
 
 .vote-section {
@@ -539,22 +513,18 @@ h1 {
 
 .vote-card {
   color: var(--text);
-  min-height: 220px;
-  padding: 22px;
+  min-height: 170px;
+  padding: 24px;
   text-align: left;
   transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
 }
 
-.vote-letter {
-  color: var(--gold);
-  display: inline-flex;
-  margin-bottom: 22px;
-  font-size: 1.8rem;
-}
-
 .vote-themes {
-  color: var(--muted);
-  font-size: 1.05rem;
+  color: var(--text);
+  display: block;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.25rem;
+  line-height: 1.25;
 }
 
 .vote-hint {
